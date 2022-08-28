@@ -3,7 +3,7 @@ from tkinter import filedialog
 from tkinter import font
 from tkinter import colorchooser
 
-print("Jewels Text Editor")
+print("Jewels | Text Editor")
 
 print("\nBy:  ViridianTelamon")
 
@@ -21,7 +21,7 @@ selected = False
 def new_file():
     text.delete("1.0", END)
     root.title("New File | Jewels Text Editor | By:  ViridianTelamon")
-    status_bar.config(text="New File          ")
+    status_bar.config(text="New File")
 
     global open_status_name
     open_status_name = False
