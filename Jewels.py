@@ -3,7 +3,7 @@ from tkinter import filedialog
 from tkinter import font
 from tkinter import colorchooser
 
-print("Jewels | Text Editor")
+print("Jewels Text Editor")
 
 print("\nBy:  ViridianTelamon")
 
