@@ -9,9 +9,6 @@ print("\nBy:  ViridianTelamon")
 
 root = Tk()
 root.title("Jewels Text Editor | By:  ViridianTelamon")
-root.iconbitmap("")
-#root.iconbitmap("c:/desktop/TheJewel.ico")
-#root.geometry("1200x680")
 root.geometry("800x600")
 
 global open_status_name
@@ -39,9 +36,7 @@ def open_file():
         open_status_name = text_file
 
     name = text_file
-    status_bar.config(text=f"{name}          ")
-    #name = name.replace("C:/", "")
-    #root.title("Jewels Text Editor | By:  ViridianTelamon")
+    status_bar.config(text=f"{name}")
     root.title(f"{name} | Jewels Text Editor | By:  ViridianTelamon")
 
     text_file = open(text_file, "r")
@@ -53,7 +48,7 @@ def save_as_file():
     text_file = filedialog.asksaveasfilename(defaultextension=".*", initialdir="", title="Save As", filetypes=(("Text Files", "*.txt"), ("HTML Files", "*.html"), ("Python Files", "*.py"), ("All Files", "*.*")))
     if text_file:
         name = text_file
-        status_bar.config(text=f"Saved:  {name}          ")
+        status_bar.config(text=f"Saved:  {name}")
         #name = name.replace("C:/", "")
         #root.title("Jewels Text Editor | By:  ViridianTelamon")    
         root.title(f"{name} | Jewels Text Editor | By:  ViridianTelamon")
@@ -68,7 +63,7 @@ def save_file():
         text_file = open(open_status_name, "w")
         text_file.write(text.get(1.0, END))
         text_file.close()
-        status_bar.config(text="File Saved          ")
+        status_bar.config(text="File Saved")
     else:
         save_as_file()
 
@@ -148,7 +143,7 @@ def colour_text():
     colours = colorchooser.askcolor()[1]
 
     if colours:
-        status_bar.config(text=f"{colours}          ")
+        status_bar.config(text=f"{colours}")
 
         colour_font = font.Font(text, text.cget("font"))
 
